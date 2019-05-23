@@ -9,7 +9,9 @@ public class Application {
 			return "Hello" + req.params(":name");
 		});
 		Spark.get("/hello", (req, res) -> {
-			return "Hello" + req.queryParams("name");
+			return "Hello name :" + req.queryParams("name") + "age:" + req.queryParams("age");
 		});
+		
+		
 	}
 }
